@@ -32,8 +32,9 @@
 
 <script>
 export default {
+  
   name:'StockCalc',
-
+  title:'Stock Trading Note',
   data(){
     
     return{
