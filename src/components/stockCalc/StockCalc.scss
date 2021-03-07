@@ -1,0 +1,142 @@
+$form-bg: #faf1cf;
+$form-shadow: #ffa580;
+$form-primary-highlight: #95a4ff;
+$form-secondary-highlight: #ffc8ff;
+$font-size: 14pt;
+$font-face: 'Fjalla One';
+$font-color: #2A293E;
+$font-color-2: #3d446e;
+$font-color-3: #faf1cf;
+
+$font-face-2:'Noto Sans TC';
+
+#calcApp{
+  
+  background: $form-bg;
+  font-family: $font-face-2;
+  padding: 45px 100px;
+  border: 2px solid rgba(0,0,0,1);
+  box-shadow: 15px 15px 1px $form-shadow, 15px 15px 1px 2px rgba(0,0,0,1);
+
+  @media (max-width:510px) {
+    padding: 40px 50px;
+    box-shadow: 15px 15px 1px $form-shadow, 15px 15px 1px 2px rgba(0,0,0,1);
+    overflow: hidden;
+  }
+
+  @media (max-width:376px) {
+    padding: 30px 10px;
+    box-shadow: none;
+    overflow: hidden;
+  }
+
+  .buyStockForm{
+    padding-top: 25px;
+    .buyStockInput{
+      display: block;
+      width: 100%;
+      font-size: $font-size;
+      line-height: $font-size * 1.5;
+      font-family: $font-face;
+      margin-bottom: $font-size * 2;
+      border: none;
+      border-bottom: 5px solid rgba(0,0,0,1);
+      background: $form-bg;
+      min-width: 250px;
+      padding-left: 5px;
+      outline: none;
+      color: rgba(0,0,0,1);
+    }
+
+    .buyStockInput:focus{
+      border-bottom: 5px solid $form-shadow;
+    }
+
+    .displayInput{
+      width: 100%;
+      margin-bottom: $font-size;
+      font-size: $font-size;
+      line-height: $font-size * 2;
+      letter-spacing: $font-size /4;
+      color:$font-color-3;
+
+      padding: 10px 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      background-color: $form-shadow;
+
+      &-style{
+        color:$font-color-2 ;
+      }
+    }
+
+    .buyStockBtn{
+      display: block;
+      margin: 0 auto;
+      line-height: $font-size * 2;
+      padding: 0 40px;
+      background: $form-shadow;
+      letter-spacing: 2px;
+      transition: .2s all ease-in-out;
+      outline: none;
+      border: 1px solid rgba(0,0,0,1);
+      box-shadow: 3px 3px 1px $form-primary-highlight, 3px 3px 1px 1px rgba(0,0,0,1);
+
+      &:hover{
+        background: rgba(0,0,0,1);
+        color: white;
+        border: 1px solid rgba(0,0,0,1);
+      }
+    }
+
+
+  }
+
+  .stockHolding{
+    width: 100%;
+    margin: $font-size * 1.5 0;
+    padding: 10px;
+    font-size: $font-size;
+    line-height: $font-size * 1.5;
+    letter-spacing: 5px;
+    background-color: $form-primary-highlight;
+
+    &-info{
+      color: $font-color-3;
+
+      &-style{
+        color: $font-color;
+      }
+    }
+
+    &-cost{
+      color: $font-color-3;
+      position: relative;
+      
+
+      &-style{
+        color: $font-color;
+      }
+
+      &>.fa{
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        font-size: $font-size;
+        cursor: pointer;
+        color: $font-color;
+        font-size: $font-size * 1.1;
+      }
+
+      &>.fa:hover{
+        color: #f0703d;
+        
+      }
+    }
+
+    
+  }
+
+}
