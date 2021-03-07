@@ -1,4 +1,4 @@
-# stock-calc
+# Stock Trading Note by Vue
 
 ## Project setup
 ```
