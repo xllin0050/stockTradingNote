@@ -61,13 +61,10 @@ export default {
   methods:{
 
     addStock(stockSymbol,strikePrice,boardLot){
-      
       // 手續費折數
       let commissionFee = 0.38
-
       // 買入費用
       const buyCost = Math.floor(strikePrice * boardLot * 1000 * 0.001425 * commissionFee)
-      
       // 存資料
       this.inputCost.push({
         "stockSymbol": stockSymbol,
@@ -75,7 +72,6 @@ export default {
         "strikePrice" : strikePrice,
         "strikeCost" : strikePrice * boardLot * 1000 + buyCost,
       })
-
       // 回復初始值
       this.stockSymbol=''
       this.strikePrice=''
